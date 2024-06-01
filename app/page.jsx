@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { FiDownload} from "react-icons/fi";
 
@@ -5,6 +7,7 @@ import { FiDownload} from "react-icons/fi";
 import Social from "@/components/Social";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
+import Link from "next/link";
 
 const Home = () => {
   return (
@@ -28,6 +31,7 @@ const Home = () => {
                 variant="outline"
                 size="lg"
                 className="uppercase flex items-center gap-2"
+                onClick={() => window.open('https://docs.google.com/document/d/16glTRdGgDTOJtI6CiwZRZ2ogCM2C6N8W/edit?usp=sharing&ouid=110821742348439769709&rtpof=true&sd=true', '_blank')}
               >
                 <span>Download Resume</span>
                 <FiDownload className="text-xl" />
@@ -38,7 +42,6 @@ const Home = () => {
               </div>
             </div>
           </div>
-
           {/* Photo */}
           <div className="order-1 xl:order-none mb-8 xl:mb-0">
             <Photo />
