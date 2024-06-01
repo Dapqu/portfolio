@@ -17,7 +17,7 @@ const Home = () => {
             <h1 className="h1">
               My name is <br /> <span className="text-accent">Dilimulati Diliyaer</span>
             </h1>
-            <p className="max-w-[500px] mb-9 text-white/80">
+            <p className="max-w-[500px] mb-9 text-customColor2">
               Driven by a passion for creation, 
               I have acquired a diverse set of skills and proficiency in multiple programming languages, 
               enabling me to develop high-quality software and websites. 

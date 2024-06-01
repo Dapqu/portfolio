@@ -25,10 +25,12 @@ module.exports = {
     extend: {
 
       colors: {
-        primary: '#1c1c22', 
+        customColor: '#d9b23d',
+        customColor2: '#f2e9d8',
+        primary: '#01070d', //1c1c22
         accent: {
-          DEFAULT: '#00ff99',
-          hover: '#00e187',
+          DEFAULT: '#0dc4d9', //00ff99
+          hover: '#0dc4d9', //00e187
         }
       },
 
