@@ -74,7 +74,7 @@ const Contact = () => {
                             </div>
                             {/* Subject */}
                             <Input type="text" name="subject" placeholder="Subject" required />
-                            <Input type="hidden" name="from_name" value="Mission Control" />
+                            <Input type="hidden" name="from_name" value="Portfolio Form Submission" />
                             {/* Text area */}
                             <Textarea
                                 className="h-[200px]"
