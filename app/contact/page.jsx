@@ -25,6 +25,31 @@ const info = [
 ]
 
 const Contact = () => {
+    const [result, setResult] = React.useState("");
+
+    const onSubmit = async (event) => {
+      event.preventDefault();
+      setResult("Sending....");
+      const formData = new FormData(event.target);
+  
+      formData.append("access_key", "d90eb892-eda8-4e48-b733-1f7629dbc32b");
+  
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        setResult("Form Submitted Successfully");
+        event.target.reset();
+      } else {
+        console.log("Error", data);
+        setResult(data.message);
+      }
+    };  
+
     return (
         <motion.section 
             initial={{ opacity: 0 }}
@@ -38,23 +63,24 @@ const Contact = () => {
                 <div className="flex flex-col xl:flex-row gap-[30px]">
                     {/* Form */}
                     <div className="xl:h-[54%] order-2 xl:order-none">
-                        <form className="flex flex-col gap-6 p-10 bg-[#232329] rounded-xl">
+                        <form onSubmit={onSubmit} className="flex flex-col gap-6 p-10 bg-[#232329] rounded-xl">
                             <h3 className="text-4xl text-accent">Let's work together</h3>
                             <p className="text-customColor2">some text goes here.</p>
                             {/* Input */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <Input type="firstname" placeholder="Firstname" />
-                                <Input type="lastname" placeholder="Lastname" />
-                                <Input type="email" placeholder="Email" />
+                                <Input type="firstname" placeholder="Firstname" required />
+                                <Input type="lastname" placeholder="Lastname" required />
+                                <Input type="email" placeholder="Email" required />
                                 <Input type="phone" placeholder="Phone number" />
                             </div>
                             {/* Text area */}
                             <Textarea
                                 className="h-[200px]"
                                 placeholder="Type your message here."
+                                required
                             />
                             {/* Btn */}
-                            <Button size="lg" className="max-w-40">
+                            <Button type="submit" size="lg" className="max-w-40">
                                 Send message
                             </Button>
                         </form>
