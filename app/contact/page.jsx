@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { motion } from "framer-motion";
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 const info = [
     {
@@ -27,6 +28,10 @@ const info = [
 
 const Contact = () => {
     const [result, setResult] = React.useState("");
+
+    const onHCaptchaChange = (token) => {
+        setValue("h-captcha-response", token);
+    };
 
     const onSubmit = async (event) => {
       event.preventDefault();
@@ -69,14 +74,15 @@ const Contact = () => {
                             <p className="text-customColor2">some text goes here.</p>
                             {/* Input */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <Input type="firstname" placeholder="Firstname" required />
-                                <Input type="lastname" placeholder="Lastname" required />
-                                <Input type="email" placeholder="Email" required />
-                                <Input type="phone" placeholder="Phone number" />
+                                <Input type="text" name="name" placeholder="Name" required />
+                                <Input type="email" name="email" placeholder="Email" required />
                             </div>
+                            {/* Subject */}
+                            <Input type="text" name="subject" placeholder="Subject" required />
                             {/* Text area */}
                             <Textarea
                                 className="h-[200px]"
+                                name="message"
                                 placeholder="Type your message here."
                                 required
                             />
@@ -84,6 +90,12 @@ const Contact = () => {
                             <Button type="submit" size="lg" className="max-w-40">
                                 Send message
                             </Button>
+                            {/* hCaptcha */}
+                            <HCaptcha
+                                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                                reCaptchaCompat={false}
+                                onVerify={onHCaptchaChange} 
+                            />
                         </form>
                     </div>
                     {/* Info */}
