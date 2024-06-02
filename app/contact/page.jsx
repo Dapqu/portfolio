@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
@@ -28,6 +29,7 @@ const info = [
 
 const Contact = () => {
     const [result, setResult] = React.useState("");
+    const { register, handleSubmit, setValue } = useForm();
 
     const onHCaptchaChange = (token) => {
         setValue("h-captcha-response", token);
@@ -69,7 +71,7 @@ const Contact = () => {
                 <div className="flex flex-col xl:flex-row gap-[30px]">
                     {/* Form */}
                     <div className="xl:h-[54%] order-2 xl:order-none">
-                        <form onSubmit={onSubmit} className="flex flex-col gap-6 p-10 bg-[#232329] rounded-xl">
+                        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6 p-10 bg-[#232329] rounded-xl">
                             <h3 className="text-4xl text-accent">Let's work together</h3>
                             <p className="text-customColor2">some text goes here.</p>
                             {/* Input */}
