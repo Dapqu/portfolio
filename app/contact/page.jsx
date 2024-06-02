@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import HCaptcha from '@hcaptcha/react-hcaptcha';
+import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
