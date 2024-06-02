@@ -33,7 +33,7 @@ const Contact = () => {
         setResult("Sending....");
         const formData = new FormData(event.target);
 
-        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+        formData.append("access_key", "d90eb892-eda8-4e48-b733-1f7629dbc32b");
 
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
@@ -66,7 +66,7 @@ const Contact = () => {
                     <div className="xl:h-[54%] order-2 xl:order-none">
                         <form onSubmit={onSubmit} className="flex flex-col gap-6 p-10 bg-[#232329] rounded-xl">
                             <h3 className="text-4xl text-accent">Let's work together</h3>
-                            <p className="text-customColor2">some text goes here.</p>
+                            <p className="text-customColor2">I'm open to all opportunities!</p>
                             {/* Input */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <Input type="text" name="name" placeholder="Name" required />

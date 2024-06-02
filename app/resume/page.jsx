@@ -55,7 +55,7 @@ const about = {
         },
         {
             fieldName: "Status",
-            fieldValue: "New Grads, Go Gators!"
+            fieldValue: "New Grad, Go Gators!"
         },
     ]
 };
