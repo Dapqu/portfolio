@@ -1,13 +1,11 @@
 "use client";
 
 import React from "react";
-import { useForm } from "react-hook-form";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Input } from "@/components/ui/input";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { motion } from "framer-motion";
-import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 const info = [
     {
@@ -29,33 +27,28 @@ const info = [
 
 const Contact = () => {
     const [result, setResult] = React.useState("");
-    const { register, handleSubmit, setValue } = useForm();
-
-    const onHCaptchaChange = (token) => {
-        setValue("h-captcha-response", token);
-    };
 
     const onSubmit = async (event) => {
-      event.preventDefault();
-      setResult("Sending....");
-      const formData = new FormData(event.target);
-  
-      formData.append("access_key", "d90eb892-eda8-4e48-b733-1f7629dbc32b");
-  
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData
-      });
-  
-      const data = await response.json();
-  
-      if (data.success) {
-        setResult("Form Submitted Successfully");
-        event.target.reset();
-      } else {
-        console.log("Error", data);
-        setResult(data.message);
-      }
+        event.preventDefault();
+        setResult("Sending....");
+        const formData = new FormData(event.target);
+
+        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            setResult("Form Submitted Successfully");
+            event.target.reset();
+        } else {
+            console.log("Error", data);
+            setResult(data.message);
+        }
     };  
 
     return (
@@ -71,7 +64,7 @@ const Contact = () => {
                 <div className="flex flex-col xl:flex-row gap-[30px]">
                     {/* Form */}
                     <div className="xl:h-[54%] order-2 xl:order-none">
-                        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-6 p-10 bg-[#232329] rounded-xl">
+                        <form onSubmit={onSubmit} className="flex flex-col gap-6 p-10 bg-[#232329] rounded-xl">
                             <h3 className="text-4xl text-accent">Let's work together</h3>
                             <p className="text-customColor2">some text goes here.</p>
                             {/* Input */}
@@ -81,6 +74,7 @@ const Contact = () => {
                             </div>
                             {/* Subject */}
                             <Input type="text" name="subject" placeholder="Subject" required />
+                            <Input type="hidden" name="from_name" value="Mission Control" />
                             {/* Text area */}
                             <Textarea
                                 className="h-[200px]"
@@ -93,11 +87,6 @@ const Contact = () => {
                                 Send message
                             </Button>
                             {/* hCaptcha */}
-                            <HCaptcha
-                                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-                                reCaptchaCompat={false}
-                                onVerify={onHCaptchaChange} 
-                            />
                         </form>
                     </div>
                     {/* Info */}

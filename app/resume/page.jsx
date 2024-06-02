@@ -31,7 +31,7 @@ import {
 
 const about = {
     title: "About me",
-    description: "some description goes here.",
+    description: "Some of the personal information about me!",
     info: [
         {
             fieldName: "Name",
@@ -63,7 +63,7 @@ const about = {
 const education = {
     icon: "",
     title: "My education",
-    description: "some description goes here.",
+    description: "Overview of my academic background. This includes details such as my degrees, certifications, courses, and any relevant academic achievements.",
     items: [
         {
             institution: "University of Florida",
@@ -80,7 +80,7 @@ const education = {
 
 const skills = {
     title: "My skills",
-    description: "some description goes here.",
+    description: "Showcase of my proficiency in various areas relevant to my field or industry, which include technical skills, as well as soft skills.",
     skillList: [
         {
             icon: <FaHtml5 />,

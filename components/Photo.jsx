@@ -20,10 +20,10 @@ const Photo = () => {
                         opacity: 1,
                         transition: { delay: 1.2, duration: 0.2, ease: 'easeInOut' }
                     }}
-                    className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
+                    className="w-[398px] h-[398px] xl:w-[598px] xl:h-[598px] mix-blend-lighten absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
                 >
                     <Image 
-                        src="/assets/photo.jpg" 
+                        src="/assets/photo.png" 
                         priority 
                         quality={100} 
                         fill 
@@ -34,7 +34,7 @@ const Photo = () => {
 
                 {/* Rank circle, league reference */}
                 <motion.svg 
-                    className="w-[300px] xl:w-[506px] h-[300px] xl:h-[506px]"
+                    className="w-[400px] xl:w-[606px] h-[400px] xl:h-[606px]"
                     fill="transparent"
                     viewBox="0 0 506 506"
                     xmlns="http://www.w3.org/2000/svg"
