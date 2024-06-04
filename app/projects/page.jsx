@@ -200,10 +200,11 @@ const Projects = () => {
                                             {/* Overlay */}
                                             <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                                             {/* Image */}
-                                            <div>
+                                            <div className="w-full h-full" style={{position: "absolute"}}>
                                                 <Image 
                                                     src={project.image} 
                                                     fill
+                                                    sizes="100vw. 50vw, 33"
                                                     className="object-cover"
                                                     alt=""
                                                 />

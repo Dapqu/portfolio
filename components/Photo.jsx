@@ -27,6 +27,7 @@ const Photo = () => {
                         priority 
                         quality={100} 
                         fill 
+                        sizes="100vw, 50vw, 33vw"
                         alt="" 
                         className="object-contain"
                     />
