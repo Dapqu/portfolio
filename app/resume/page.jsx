@@ -42,10 +42,6 @@ const about = {
             fieldValue: "+1(786)899-8333"
         },
         {
-            fieldName: "Experience",
-            fieldValue: "5+ Years"
-        },
-        {
             fieldName: "Email",
             fieldValue: "dilyarswe@gmail.com"
         },
@@ -55,7 +51,7 @@ const about = {
         },
         {
             fieldName: "Status",
-            fieldValue: "New Grad, Go Gators!"
+            fieldValue: "New Grad @ UF, Go Gators!"
         },
     ]
 };
