@@ -25,7 +25,13 @@ import {
     SiCplusplus,
     SiThreedotjs,
     SiBlender,
-    SiGit
+    SiGit,
+    SiFlask,
+    SiNumpy,
+    SiPandas,
+    SiPytorch,
+    SiTensorflow,
+    SiAmazonaws
 } from "react-icons/si";
 
 
@@ -65,6 +71,11 @@ const education = {
             institution: "University of Florida",
             degree: "Computer Science",
             duration: "2019 - 2024"
+        },
+        {
+            institution: "Amazon Web Service",
+            degree: "AWS Certified Cloud Practitioner",
+            duration: "07/2024 - 07/2027"
         },
         {
             institution: "Coursera",
@@ -145,7 +156,31 @@ const skills = {
         {
             icon: <SiBlender />,
             name: "blender"
-        }
+        },
+        {
+            icon: <SiFlask />,
+            name: "flask"
+        },
+        {
+            icon: <SiNumpy />,
+            name: "numpy"
+        },
+        {
+            icon: <SiPandas />,
+            name: "pandas"
+        },
+        {
+            icon: <SiPytorch />,
+            name: "pytorch"
+        },
+        {
+            icon: <SiTensorflow />,
+            name: "tensorflow"
+        },
+        {
+            icon: <SiAmazonaws />,
+            name: "aws"
+        },
     ]
 };
 

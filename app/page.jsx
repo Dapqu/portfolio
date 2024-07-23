@@ -16,14 +16,12 @@ const Home = () => {
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           {/* Intro */}
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <span className="text-xl">Software Developer</span>
+            <span className="text-xl">Software Developer (AI Engineer)</span>
             <h1 className="h1">
               My name is <br /> <span className="text-accent">Dilimulati Diliyaer</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-customColor2">
-              Driven by a passion for creation, 
-              I have acquired a diverse set of skills and proficiency in multiple programming languages, 
-              enabling me to develop high-quality software and websites. 
+            Driven by a passion for innovation, I have honed a diverse set of swe skills enabling me to develop AI-driven software and websites. My excitement for AI engineering fuels my commitment to creating intelligent solutions that push the boundaries of technology.
             </p>
             {/* Resume download button */}
             <div className="flex flex-col xl:flex-row items-center gap-8">
