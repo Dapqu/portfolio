@@ -1,5 +1,6 @@
 import { JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react"
+import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 
 // Component imports
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         <TransitionEffect />
         <PageTransition>{children}</PageTransition>
         <Analytics/>
+        <GoogleAnalytics gaId="YSQZWWECEC"/>
         </body>
     </html>
   );
