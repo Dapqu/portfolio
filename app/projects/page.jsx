@@ -10,7 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ProjectSliderBtns from "@/components/ProjectSliderBtns";
 
-export const metadata = {
+const metadata = {
     title: "Projects"
 }
 

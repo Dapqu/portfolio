@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { motion } from "framer-motion";
 
-export const metadata = {
+const metadata = {
     title: "Contact"
 }
 
