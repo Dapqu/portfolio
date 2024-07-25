@@ -1,5 +1,6 @@
 import { JetBrains_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react"
+import { GoogleAnalytics } from '@next/third-parties/google'
 import "./globals.css";
 
 // Component imports
@@ -24,22 +25,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSQZWWECEC"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-YSQZWWECEC');
-          `,
-        }} />
-      </Head>
       <body className={jetbrainsMono.variable}>
         <Header />
         <TransitionEffect />
         <PageTransition>{children}</PageTransition>
         <Analytics/>
+        <GoogleAnalytics gaId="G-YSQZWWECEC" />
         </body>
     </html>
   );
