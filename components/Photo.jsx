@@ -28,7 +28,7 @@ const Photo = () => {
                         quality={100} 
                         fill 
                         sizes="100vw, 50vw, 33vw"
-                        alt="" 
+                        alt="Dilimulati Diliyaer" 
                         className="object-contain"
                     />
                 </motion.div>

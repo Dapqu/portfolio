@@ -207,7 +207,7 @@ const Projects = () => {
                                                     fill
                                                     sizes="100vw. 50vw, 33"
                                                     className="object-cover"
-                                                    alt=""
+                                                    alt="Dilimulati Diliyaer"
                                                 />
                                             </div>
                                         </div>

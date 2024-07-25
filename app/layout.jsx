@@ -20,6 +20,9 @@ export const metadata = {
     template: "%s - Dilimulati Diliyaer"
   },
   description: "Dilimulati Diliyaer's Landing Page",
+  twitter: {
+    card: "summary_large_image"
+  }
 };
 
 export default function RootLayout({ children }) {
