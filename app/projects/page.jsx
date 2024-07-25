@@ -10,6 +10,10 @@ import Link from "next/link";
 import Image from "next/image";
 import ProjectSliderBtns from "@/components/ProjectSliderBtns";
 
+export const metadata = {
+    title: "Projects"
+}
+
 const projects = [
     {
         title: "Void - GWJ #69",

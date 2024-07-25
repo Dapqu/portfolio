@@ -14,13 +14,27 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Dilimulati Diliyaer",
-  description: "...",
+  title: {
+    default: "Dilimulati Diliyaer",
+    template: "%s - Dilimulati Diliyaer"
+  },
+  description: "Dilimulati Diliyaer's Landing Page",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YSQZWWECEC"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YSQZWWECEC');
+          `,
+        }} />
+      </Head>
       <body className={jetbrainsMono.variable}>
         <Header />
         <TransitionEffect />

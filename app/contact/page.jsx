@@ -7,6 +7,10 @@ import { Input } from "@/components/ui/input";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa'
 import { motion } from "framer-motion";
 
+export const metadata = {
+    title: "Contact"
+}
+
 const info = [
     {
         icon: <FaPhoneAlt />,
