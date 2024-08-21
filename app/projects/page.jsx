@@ -28,7 +28,7 @@ const projects = [
         description: "Concise and clear portfolio website showcasing my education, professional experience, and skills. The current site itself is the live demonstration of the project.",
         stack: [{ name: "Css 3" }, { name: "Html 5" }, { name: "Javascript" }, { name: "Next.js" }, { name: "Node.js" }, { name: "React" }, { name: "Tailwind Css" }],
         image: "/assets/projects/02.png",
-        live: "N/A",
+        live: "https://dilimulati.com",
         github: "https://github.com/Dapqu/portfolio",
     },
     {
@@ -48,7 +48,7 @@ const projects = [
         github: "https://github.com/Dapqu/Programming-Language",
     },
     {
-        title: "Tennis Match Footage Analyzer (WIP)",
+        title: "Tennis Match Footage Analyzer",
         description: "Automated AI system for tracking players, tennis ball, and the court through any a  tennis match footage. By leveraging deep learning models and computer vision techniques, the system can identify players, track their movements, and overlay key court markers on the video frames. The project utilizes the YOLO object detection model for player tracking and a custom ResNet-based model for court line detection.",
         stack: [{ name: "YOLO" } ,{ name: "Python" }, { name: "Pytorch" }, { name: "Jupyter Notebook" }, { name: "ML/AI" }, { name: "OpenCV" }, { name: "Pickle" }, { name: "Pandas" }],
         image: "/assets/projects/12.png",
@@ -62,6 +62,22 @@ const projects = [
         image: "/assets/projects/05.png",
         live: "https://interective-world-map-git-main-dapqus-projects.vercel.app/",
         github: "https://github.com/Dapqu/InterectiveWorldMap",
+    },
+    {
+        title: "Youtube Video Downloader",
+        description: "",
+        stack: [{ name: "Css 3" }, { name: "Html 5" }, { name: "Javascript" }, { name: "Next.js" }, { name: "Node.js" }, { name: "React" }, { name: "Tailwind Css" }],
+        image: "/assets/projects/13.png",
+        live: "https://youtube-video-downloader-beryl.vercel.app/",
+        github: "https://github.com/Dapqu/youtube_video_downloader"
+    },
+    {
+        title: "Sticky Note App",
+        description: "",
+        stack: [{ name: "Css 3" }, { name: "Html 5" }, { name: "Javascript" }, { name: "Next.js" }, { name: "Node.js" }, { name: "React" }, { name: "Tailwind Css" }],
+        image: "/assets/projects/14.png",
+        live: "https://stickynoteapp-five.vercel.app/",
+        github: "https://github.com/Dapqu/stickynoteapp"
     },
     {
         title: "Memory Manager",
