@@ -16,6 +16,14 @@ const metadata = {
 
 const projects = [
     {
+        title: "Desktop Pet, coming to steam",
+        description: "Developing a desktop pet game in Godot Engine using GDScript (Python) and GDNative (C++). Designed and created interactive pets with feeding, petting, and mini-games for earning currency. Integrating Windows OS API via GDNative C++ to enable pets interaction with the OS, such as taskbar and active window.",
+        stack: [{ name: "Asperite" }, { name: "GD Script (Python)" }, { name: "Godot Engine" }, { name: "GD Native (C++/C#)" }, { name: "Windows OS API" }],
+        image: "/assets/projects/15.png",
+        live: "N/A",
+        github: "https://github.com/Dapqu/DesktopPet",
+    },
+    {
         title: "Void - GWJ #69",
         description: "Solo game development project created for Godot Wild Jam, completed in 9 days. In a race against the encroaching darkness, harness your void vision to navigate through the universe.",
         stack: [{ name: "Asperite" }, { name: "GD Script (Python)" }, { name: "Godot Engine" }],
@@ -24,20 +32,20 @@ const projects = [
         github: "https://github.com/Dapqu/Void-GWJ-69",
     },
     {
-        title: "Portfolio Website",
-        description: "Concise and clear portfolio website showcasing my education, professional experience, and skills. The current site itself is the live demonstration of the project.",
-        stack: [{ name: "Css 3" }, { name: "Html 5" }, { name: "Javascript" }, { name: "Next.js" }, { name: "Node.js" }, { name: "React" }, { name: "Tailwind Css" }],
-        image: "/assets/projects/02.png",
-        live: "https://dilimulati.com",
-        github: "https://github.com/Dapqu/portfolio",
-    },
-    {
         title: "FlapAI",
         description: "Elevating the classic Flappy Bird concept by introducing new gameplay twists such as a hardmode. Leveraging the Unity game engine and the implementation of Artificial Intelligence algorithms such as PPO and Q-learning. This integration enabled the AI to autonomously navigate and play in the reimagined Flappy (Bird) AI.",
         stack: [{ name: "Asperite" }, { name: "C#" }, { name: "ML" }, { name: "Python" }, { name: "ShaderLab" }, { name: "Unity Engine" }],
         image: "/assets/projects/03.png",
         live: "N/A",
         github: "https://github.com/Dapqu/FlapAI",
+    },
+    {
+        title: "Portfolio Website",
+        description: "Concise and clear portfolio website showcasing my education, professional experience, and skills. The current site itself is the live demonstration of the project.",
+        stack: [{ name: "Css 3" }, { name: "Html 5" }, { name: "Javascript" }, { name: "Next.js" }, { name: "Node.js" }, { name: "React" }, { name: "Tailwind Css" }],
+        image: "/assets/projects/02.png",
+        live: "https://dilimulati.com",
+        github: "https://github.com/Dapqu/portfolio",
     },
     {
         title: "Programming Language",
